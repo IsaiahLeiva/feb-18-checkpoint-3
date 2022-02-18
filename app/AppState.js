@@ -5,7 +5,9 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Value').Value[]} */
   values = []
 
-  Lists = []
+  lists = []
+
+  tasks = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {
