@@ -30,20 +30,29 @@
           <h1>Task Boi</h1>
         </div>
       </div>
-      <div class="row">
-        <div>
-          <!-- //SECTION: Below is 'create list' location: -->
-          <!-- //NOTE - Save for later -->
-
+      <div class="d-flex row text-center justify-content-center">
+        <!-- //SECTION: Below is 'create list' location: -->
+        <div class="col-md-4">
+          <label>
+            <h6>List Name...</h6>
+            <input type="text-muted">
+          </label>
+          <form class="col-md-4" action="">
+            <label for="color-picker">List Color:</label>
+            <input type="color" id="listcolor" name="listcolor" value="#ff0000">
+          </form>
+          <button class="btn btn-dark btn-sm col-md-4">Create List</button>
         </div>
       </div>
+      <!-- //SECTION: End of create list section: -->
+
       <div class="row">
         <div class="col-12">
           <div id="app">
 
             <!-- //SECTION: Template start -->
             <form action="">
-              <div class="">
+              <div class="d-flex">
                 <input type="text" name="">
               </div>
             </form>
