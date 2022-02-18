@@ -10,6 +10,7 @@
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
   <title>feb-18-checkpoint-3</title>
 </head>
 
@@ -33,9 +34,9 @@
       <div class="row text-center justify-content-center">
         <!-- //SECTION: Below is 'create list' location: -->
         <div class="col-12 col-md-4">
-          <form class="" action="" onsubmit="app.listsController.createList()">
-            <label class="">List Name...</label>
-            <input type="text-muted">
+          <form onsubmit="app.listsController.createList()">
+            <label class=""></label>
+            <input placeholder="List Name..." type="text-muted">
             <label for="color-picker">List Color:</label>
             <input type="color" id="listcolor" name="listcolor" value="#ff0000">
             <button class="btn btn-dark btn-sm">Create List</button>
@@ -45,12 +46,14 @@
       <!-- //SECTION: End of create list section: -->
 
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 col-md-4">
           <!-- //SECTION: Template start -->
           <div class="card" style="width: 18rem;">
             <div class="card-header">Test Name
+              <button class="deletebtn">Delete List</button>
             </div>
             <ul class="list-group list-group-flush">
+              <button>Add Task</button>
             </ul>
           </div>
           <!-- //SECTION: - Template end -->
