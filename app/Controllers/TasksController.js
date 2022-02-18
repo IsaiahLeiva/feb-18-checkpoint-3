@@ -8,4 +8,8 @@ export class TasksController {
         ProxyState.on('Tasks', _draw)
         _draw()
     }
+
+    createTask() {
+
+    }
 }

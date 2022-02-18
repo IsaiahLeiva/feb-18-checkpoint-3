@@ -1,7 +1,4 @@
-import { ProxyState } from "../AppState";
-
-
-
+import { ProxyState } from "../AppState.js";
 
 
 //Private
