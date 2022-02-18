@@ -11,7 +11,10 @@ export class List {
 
     get listTemplate() {
         // TODO: add html
-        return
+        return `
+        
+        
+        `
 
 
     }

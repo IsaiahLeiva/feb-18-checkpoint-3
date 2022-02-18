@@ -11,7 +11,11 @@ export class Task {
 
     get TaskTemplate() {
         // TODO: add html 
-        return
+        return `
+        
+        
+        `
+
 
     }
 
