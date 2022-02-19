@@ -1,15 +1,21 @@
 
-function _draw() {
-
-}
 
 export class TasksController {
-    constructor() {
-        ProxyState.on('Tasks', _draw)
-        _draw()
+    createTask(taskID) {
+        window.event.preventDefault()
+        const form = window.event.target
+
+        const newTask = {
+            taskID,
+            name: form.name.value
+        }
+        console.log("[TaskController]: createTask", newTask)
+        taskService.createTask(newTask)
     }
 
-    createTask() {
-
+    async deleteTask(id) {
+        if (await Pop.confirm()) {
+            taskService.deleteTask(id)
+        }
     }
 }
