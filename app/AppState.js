@@ -3,7 +3,6 @@ import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
-
   /** @type {import('./Models/List').List[]} */
   lists = []
   /** @type {import('./Models/Task').Task[]} */
