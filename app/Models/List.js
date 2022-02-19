@@ -13,10 +13,16 @@ export class List {
     get Template() {
         // TODO: add html
         return `
-        
-        
+        <form class="px-3 pb-2" onsubmit="app.tasksController.createTask('${this.id}')">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Add Task..." aria-label="task"
+            aria-describedby="task" id="name">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+              class="mdi mdi-plus"></i></button>
+        </div>
+      </form>
+      
         `
-
     }
 
     get TasksTemplate() {
