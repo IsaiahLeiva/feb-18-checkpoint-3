@@ -36,7 +36,7 @@
         <div class="col-12 col-md-4">
           <form onsubmit="app.listsController.createList()">
             <label class=""></label>
-            <input placeholder="List Name..." type="text-muted">
+            <input id="listname" name="listname" placeholder="List Name..." type="text-muted">
             <label for="color-picker">List Color:</label>
             <input type="color" id="listcolor" name="listcolor" value="#ff0000">
             <button class="btn btn-dark btn-sm">Create List</button>
@@ -47,7 +47,7 @@
 
       <!-- //SECTION: Template start -->
       <div class="row">
-        <div class="col-12 col-md-4 d-flex justify-content-evenly">
+        <div class="col-12 col-md-4 d-flex">
           <div class="card" style="width: 18rem;">
             <div class="card-header">Test Name
               <button class="deletebtn btn-danger">
