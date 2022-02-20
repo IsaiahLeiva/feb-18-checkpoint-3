@@ -23,20 +23,19 @@ export class List {
         </h4>
       </div>
       <div class="p-3">
-        <div class="bg-secondary lighten-30 p-2 rounded">
-        </div>
+        
         <div class="bg-secondary lighten-30 mt-4 p-2 rounded">
-          <p><b>Add Task</b></p>
           <ul>
              ${this.TasksTemplate}
           </ul>
         </div>
       </div>
-    //   NOTE: Below is the task adding template 
+    
         <form class="px-3 pb-2" onsubmit="app.tasksController.createTask('${this.id}')">
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Add Task..." aria-label="task"
+          <input type="text" id="requirement" class="form-control" placeholder="Add Task..." aria-label="task"
             aria-describedby="task" id="name">
+            <div id="error"></div>
           <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
               class="mdi mdi-plus"></i></button>
         </div>

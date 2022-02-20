@@ -17,7 +17,6 @@ export class ListsController {
     constructor() {
         ProxyState.on('lists', _drawList)
         ProxyState.on('tasks', _drawList)
-        //NOTE: Unsure why I keep getting the error that the line below is undefined
         ProxyState.on('lists', saveState)
         ProxyState.on('tasks', saveState)
 

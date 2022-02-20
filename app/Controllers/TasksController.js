@@ -1,3 +1,6 @@
+import { ProxyState } from "../AppState.js"
+import { tasksService } from "../Services/TasksService.js"
+import { loadState, saveState } from "../Utils/LocalStorage.js"
 
 
 export class TasksController {
@@ -10,7 +13,14 @@ export class TasksController {
             name: form.name.value
         }
         console.log("[TaskController]: createTask", newTask)
-        taskService.createTask(newTask)
+        tasksService.createTask(newTask)
+    }
+
+    permitTask(value) {
+        if (value.length >= 3 & value.length <= 50) {
+            // document.getElementById('error').innerHTML = "Must be between 3 and 50 characters";
+
+        }
     }
 
     async deleteTask(id) {
