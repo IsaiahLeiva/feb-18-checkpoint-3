@@ -6,6 +6,7 @@ import { loadState, saveState } from "../Utils/LocalStorage.js"
 function _drawList() {
     let template = ''
     const lists = ProxyState.lists
+    console.log(lists)
     lists.forEach(l => template += l.Template)
     document.getElementById('lists').innerHTML = template
 }

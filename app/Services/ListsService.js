@@ -8,7 +8,7 @@ class ListsService {
         ProxyState.tasks = ProxyState.tasks.filter(t => t.listsId != id)
     }
     createList(newList) {
-        const list = new List(newList)
+        const list = new List(newList.name, newList.color)
         ProxyState.lists = [...ProxyState.lists, list]
     }
 }

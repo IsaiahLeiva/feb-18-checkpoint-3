@@ -11,7 +11,28 @@ export class List {
     }
 
     get Template() {
+        console.log(this.name);
+        console.log(this.color)
         return `
+        <div class="col-md-4 p-3">
+    <div  class="rounded shadow bg-white">
+      <div style = "${'background' + ':' + this.color + ';'}" class="rounded-top text-center p-2">
+        <h4 class="d-flex justify-content-between">
+        ${this.name.toUpperCase()} 
+        <i class="mdi mdi-delete selectable" title="delete list" onclick="app.listsController.deleteList('${this.id}')" ></i>
+        </h4>
+      </div>
+      <div class="p-3">
+        <div class="bg-secondary lighten-30 p-2 rounded">
+        </div>
+        <div class="bg-secondary lighten-30 mt-4 p-2 rounded">
+          <p><b>Add Task</b></p>
+          <ul>
+             ${this.TasksTemplate}
+          </ul>
+        </div>
+      </div>
+    //   NOTE: Below is the task adding template 
         <form class="px-3 pb-2" onsubmit="app.tasksController.createTask('${this.id}')">
         <div class="input-group">
           <input type="text" class="form-control" placeholder="Add Task..." aria-label="task"
