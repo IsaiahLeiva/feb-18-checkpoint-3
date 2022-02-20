@@ -11,7 +11,6 @@ export class List {
     }
 
     get Template() {
-        // TODO: add html
         return `
         <form class="px-3 pb-2" onsubmit="app.tasksController.createTask('${this.id}')">
         <div class="input-group">
@@ -21,7 +20,7 @@ export class List {
               class="mdi mdi-plus"></i></button>
         </div>
       </form>
-      
+
         `
     }
 
@@ -32,9 +31,11 @@ export class List {
         return template
     }
 
-    // const myTasks = ProxyState.tasks.filter(t => t.taskId == this.id)
 
+    // const myTasks = ProxyState.tasks.filter(t => t.tasksId == this.id)
 
+    // out += myTasks.length
 
+    // return out
 
 }
