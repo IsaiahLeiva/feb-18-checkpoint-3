@@ -1,5 +1,6 @@
-import { ProxyState } from "../AppState.js";
-
+import { ProxyState } from "../AppState.js"
+import { listsService } from "../Services/ListsService.js"
+import { loadState, saveState } from "../Utils/LocalStorage.js"
 
 //Private
 function _drawList() {
@@ -15,6 +16,7 @@ export class ListsController {
     constructor() {
         ProxyState.on('lists', _drawList)
         ProxyState.on('tasks', _drawList)
+        //NOTE: Unsure why I keep getting the error that the line below is undefined
         ProxyState.on('lists', saveState)
         ProxyState.on('tasks', saveState)
 
