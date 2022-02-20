@@ -10,6 +10,7 @@ export class List {
         this.color = color
     }
 
+    //NOTE: my template keeps regenerating lists within itself. 
     get Template() {
         console.log(this.name);
         console.log(this.color)

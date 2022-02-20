@@ -19,7 +19,7 @@ export class TasksController {
     permitTask(value) {
         if (value.length >= 3 & value.length <= 50) {
             // document.getElementById('error').innerHTML = "Must be between 3 and 50 characters";
-
+            //NOTE: not sure if this is what will get the char limit to be within parameters
         }
     }
 
