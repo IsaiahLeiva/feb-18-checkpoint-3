@@ -22,6 +22,19 @@ export class TasksController {
             //NOTE: not sure if this is what will get the char limit to be within parameters
         }
     }
+    inputHandler(){
+        var x = document.getElementById("requirement").value;
+        console.log(x);
+        if(x.length<3){
+            document.getElementById('error').innerHTML = "Must contain 3 characters";
+        }
+        else if(x.length>50){
+            document.getElementById('error').innerHTML = "Must be between 3 and 50 characters";
+        }
+        else{
+            document.getElementById('error').innerHTML = "You are good to go!";
+        }
+    }
 
     async deleteTask(id) {
         if (await Pop.confirm()) {
