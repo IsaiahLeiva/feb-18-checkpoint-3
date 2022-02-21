@@ -35,11 +35,11 @@ export class List {
 
         <form class="px-3 pb-2" onsubmit="app.tasksController.createTask('${this.id}')">
           <div class="input-group">
-            <input type="text" id="requirement" class="form-control" minlength="3" maxlength="50"
+            <input type="text" name="taskname" id="requirement" class="form-control" minlength="3" maxlength="50"
               placeholder="Add Task..." aria-label="task" aria-describedby="task" id="name">
             <div id="error"></div>
-            <submit class="btn btn-outline-secondary" type="submit" id="button-addon2"><i class="mdi mdi-plus"></i>
-            </submit>
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i class="mdi mdi-plus"></i>
+            </button>
           </div>
         </form>
       </div>
