@@ -7,7 +7,7 @@ class TasksService {
         ProxyState.tasks = ProxyState.tasks.filter(t => t.id != id)
     }
     createTask(newTask) {
-        console.log('this works', newTask);
+        // console.log('this works', newTask);
         const task = new Task(newTask)
         ProxyState.tasks = [...ProxyState.tasks, task]
     }
