@@ -60,10 +60,10 @@ export class List {
   // NOTE do another get method, filter array by listId, and then filter again by homw many are complete
   // get TasksTotal(){}
 
-  // const myTasks = ProxyState.tasks.filter(t => t.tasksId == this.id)
+  get TasksTotal() {
+    tasks.filter(listsId)
+    tasks.filter(this.TasksTotal)
+  }
 
-  // out += myTasks.length
-
-  // return out
 
 }
