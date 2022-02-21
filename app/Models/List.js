@@ -37,8 +37,8 @@ export class List {
           <input type="text" id="requirement" class="form-control" placeholder="Add Task..." aria-label="task"
             aria-describedby="task" id="name">
             <div id="error"></div>
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
-              class="mdi mdi-plus"></i></button>
+          <submit class="btn btn-outline-secondary" type="submit" id="button-addon2"><i
+              class="mdi mdi-plus"></i></submit>
         </div>
       </form>
 
