@@ -9,9 +9,10 @@ export function saveState() {
         lists: ProxyState.lists,
         tasks: ProxyState.tasks
     }))
+    console.log('I just did a save state');
 }
 
-localStorage.removeItem('ListBoi')
+// localStorage.removeItem('ListBoi')
 
 export function loadState() {
     let data = JSON.parse(localStorage.getItem('ListBoi'))
@@ -19,6 +20,6 @@ export function loadState() {
     console.log('loaded data', data)
     if (data != null) {
         ProxyState.lists = data.lists.map(l => new List(l))
-        ProxyState.toppings = data.tasks.map(t => new Task(t))
+        ProxyState.tasks = data.tasks.map(t => new Task(t))
     }
 }

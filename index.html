@@ -36,7 +36,9 @@
         <div class="col-12 col-md-4">
           <form onsubmit="app.listsController.createList()">
             <label class=""></label>
-            <input id="listname" name="listname" placeholder="List Name..." type="text-muted">
+            <!-- NOTE this where you limit the ammount of characters in the name "min/maxlength"-->
+            <!-- NOTE you need to make this required -->
+            <input id="listname" name="listname" placeholder="List Name..." type="text-muted" required>
             <label for="color-picker">List Color:</label>
             <input type="color" id="listcolor" name="listcolor" value="#ff0000">
             <button class="btn btn-dark btn-sm">Create List</button>
@@ -58,10 +60,10 @@
               <button>Add Task</button>
             </ul>
           </div> -->
-
-      <div id='lists'>
+      <div id='lists' class="row">
 
       </div>
+
       <!-- //SECTION: - Template end -->
 
     </div>

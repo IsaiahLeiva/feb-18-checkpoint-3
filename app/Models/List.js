@@ -4,22 +4,22 @@ import { generateId } from "../Utils/generateId.js";
 
 
 export class List {
-    constructor(name, color) {
-        this.id = generateId()
-        this.name = name
-        this.color = color
-    }
+  constructor(data) {
+    this.id = data.id || generateId()
+    this.name = data.name
+    this.color = data.color
+  }
 
-    //NOTE: my template keeps regenerating lists within itself. 
-    get Template() {
-        console.log(this.name);
-        console.log(this.color)
-        return `
+  //NOTE: my template keeps regenerating lists within itself. 
+  get Template() {
+    console.log(this.name);
+    console.log(this.color)
+    return `
         <div class="col-md-4 p-3">
     <div  class="rounded shadow bg-white">
       <div style = "${'background' + ':' + this.color + ';'}" class="rounded-top text-center p-2">
         <h4 class="d-flex justify-content-between">
-        ${this.name.toUpperCase()} 
+        ${this.name} 
         <i class="mdi mdi-delete selectable" title="delete list" onclick="app.listsController.deleteList('${this.id}')" ></i>
         </h4>
       </div>
@@ -39,24 +39,28 @@ export class List {
             <div id="error"></div>
           <submit class="btn btn-outline-secondary" type="submit" id="button-addon2"><i
               class="mdi mdi-plus"></i></submit>
-        </div>
-      </form>
+              </form>
+              </div>
 
         `
-    }
+  }
 
-    get TasksTemplate() {
-        let template = ''
-        const myTasks = ProxyState.tasks.filter(t => t.tasksId == this.id)
-        myTasks.forEach(t => template += t.Template)
-        return template
-    }
+  get TasksTemplate() {
+    let template = ''
+    // NOTE                                        right here is where you need to filter the tasks by their listId
+    const myTasks = ProxyState.tasks.filter(t => t.tasksId == this.id)
+    myTasks.forEach(t => template += t.Template)
+    return template
+  }
 
+  // NOTE find how many tasks are for this list, use a filter, and then get the length of that array
+  // NOTE do another get method, filter array by listId, and then filter again by homw many are complete
+  // get TasksTotal(){}
 
-    // const myTasks = ProxyState.tasks.filter(t => t.tasksId == this.id)
+  // const myTasks = ProxyState.tasks.filter(t => t.tasksId == this.id)
 
-    // out += myTasks.length
+  // out += myTasks.length
 
-    // return out
+  // return out
 
 }

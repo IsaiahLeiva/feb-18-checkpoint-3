@@ -4,11 +4,13 @@ import { loadState, saveState } from "../Utils/LocalStorage.js"
 
 
 export class TasksController {
+    // NOTE this is where you need to pass down a listId
     createTask(taskID) {
         window.event.preventDefault()
         const form = window.event.target
 
         const newTask = {
+            // NOTE this where you are setting the listId to each of your tasks
             taskID,
             name: form.name.value
         }
@@ -20,6 +22,7 @@ export class TasksController {
         if (value.length >= 3 & value.length <= 50) {
             // document.getElementById('error').innerHTML = "Must be between 3 and 50 characters";
             //NOTE: not sure if this is what will get the char limit to be within parameters
+
         }
     }
 
