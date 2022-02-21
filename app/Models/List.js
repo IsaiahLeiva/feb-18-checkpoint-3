@@ -14,7 +14,7 @@ export class List {
     console.log(this.name);
     console.log(this.color)
     return `
-    <div id="lists" class="row">
+  <div id="lists" class="row">
     <div class="col-md-4 p-3">
       <div class="rounded shadow bg-white">
         <div style="${'background' + ':' + this.color + ';'}" class="rounded-top text-center p-2">
@@ -35,14 +35,15 @@ export class List {
 
         <form class="px-3 pb-2" onsubmit="app.tasksController.createTask('${this.id}')">
           <div class="input-group">
-            <input type="text" id="requirement" class="form-control" minlength="3" maxlength="50" placeholder="Add Task..." aria-label="task"
-              aria-describedby="task" id="name">
+            <input type="text" id="requirement" class="form-control" minlength="3" maxlength="50"
+              placeholder="Add Task..." aria-label="task" aria-describedby="task" id="name">
             <div id="error"></div>
             <submit class="btn btn-outline-secondary" type="submit" id="button-addon2"><i class="mdi mdi-plus"></i>
             </submit>
         </form>
       </div>
     </div>
+  </div>
         `
   }
 
