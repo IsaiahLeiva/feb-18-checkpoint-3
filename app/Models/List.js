@@ -14,7 +14,7 @@ export class List {
     console.log(this.name);
     console.log(this.color)
     return `
-  <div id="lists" class="row">
+
     <div class="col-md-4 p-3">
       <div class="rounded shadow bg-white">
         <div style="${'background' + ':' + this.color + ';'}" class="rounded-top text-center p-2">
@@ -40,10 +40,10 @@ export class List {
             <div id="error"></div>
             <submit class="btn btn-outline-secondary" type="submit" id="button-addon2"><i class="mdi mdi-plus"></i>
             </submit>
+          </div>
         </form>
       </div>
     </div>
-  </div>
         `
   }
 
