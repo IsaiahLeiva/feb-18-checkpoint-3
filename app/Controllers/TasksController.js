@@ -5,30 +5,22 @@ import { loadState, saveState } from "../Utils/LocalStorage.js"
 
 export class TasksController {
     // NOTE this is where you need to pass down a listId
-    createTask(taskID) {
+    createTask(listID) {
         window.event.preventDefault()
         const form = window.event.target
 
         const newTask = {
             // NOTE this where you are setting the listId to each of your tasks
-            taskID,
+            listID,
             name: form.name.value
         }
         console.log("[TaskController]: createTask", newTask)
         tasksService.createTask(newTask)
     }
 
-    permitTask(value) {
-        if (value.length >= 3 & value.length <= 50) {
-            // document.getElementById('error').innerHTML = "Must be between 3 and 50 characters";
-            //NOTE: not sure if this is what will get the char limit to be within parameters
-
-        }
-    }
-
     async deleteTask(id) {
         if (await Pop.confirm()) {
-            taskService.deleteTask(id)
+            tasksService.deleteTask(id)
         }
     }
 }

@@ -37,8 +37,8 @@
           <form onsubmit="app.listsController.createList()">
             <label class=""></label>
             <!-- NOTE this where you limit the ammount of characters in the name "min/maxlength"-->
-            <!-- NOTE you need to make this required -->
-            <input id="listname" name="listname" placeholder="List Name..." type="text-muted" required>
+            <input id="listname" name="listname" placeholder="List Name..." minlength="3" maxlength="15"
+              type="text-muted" required>
             <label for="color-picker">List Color:</label>
             <input type="color" id="listcolor" name="listcolor" value="#ff0000">
             <button class="btn btn-dark btn-sm">Create List</button>
@@ -47,7 +47,6 @@
       </div>
       <!-- //SECTION: End of create list section: -->
 
-      <!-- //SECTION: Template start -->
       <!-- <div class="row">
         <div class="col-12 col-md-4 d-flex">
           <div class="card" style="width: 18rem;">
@@ -60,9 +59,37 @@
               <button>Add Task</button>
             </ul>
           </div> -->
-      <div id='lists' class="row">
 
-      </div>
+      <!-- //SECTION: Template start -->
+      <!-- <div id='lists' class="row">
+        <div class="col-md-4 p-3">
+          <div class="rounded shadow bg-white">
+            <div style="${'background' + ':' + this.color + ';'}" class="rounded-top text-center p-2">
+              <h4 class="d-flex justify-content-between">
+                ${this.name}
+                <i class="mdi mdi-delete selectable" title="delete list"
+                  onclick="app.listsController.deleteList('${this.id}')"></i>
+              </h4>
+            </div>
+            <div class="p-3">
+
+              <div class="bg-secondary lighten-30 mt-4 p-2 rounded">
+                <ul>
+                  ${this.TasksTemplate}
+                </ul>
+              </div>
+            </div>
+
+            <form class="px-3 pb-2" onsubmit="app.tasksController.createTask('${this.id}')">
+              <div class="input-group">
+                <input type="text" id="requirement" class="form-control" placeholder="Add Task..." aria-label="task"
+                  aria-describedby="task" id="name">
+                <div id="error"></div>
+                <submit class="btn btn-outline-secondary" type="submit" id="button-addon2"><i class="mdi mdi-plus"></i>
+                </submit>
+            </form>
+          </div>
+        </div> 
 
       <!-- //SECTION: - Template end -->
 
