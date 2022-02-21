@@ -3,6 +3,14 @@ import { tasksService } from "../Services/TasksService.js"
 import { loadState, saveState } from "../Utils/LocalStorage.js"
 
 
+// function _drawTask() {
+//     let template = ''
+//     const tasks = ProxyState.tasks
+//     console.log(tasks)
+//     tasks.forEach(t => template += t.Template)
+//     document.getElementById('tasks').innerHTML = template
+// }
+
 export class TasksController {
     // NOTE this is where you need to pass down a listId
     createTask(listID) {
