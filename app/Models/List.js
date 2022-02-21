@@ -34,9 +34,9 @@ export class List {
     
         <form class="px-3 pb-2" onsubmit="app.tasksController.createTask('${this.id}')">
         <div class="input-group">
-          <input type="text" id="requirement" class="form-control" placeholder="Add Task..." aria-label="task"
+          <input type="text" id="requirement" oninput="app.tasksController.inputHandler()" class="form-control" placeholder="Add Task..." aria-label="task"
             aria-describedby="task" id="name">
-            <div id="error"></div>
+            <div id='error'></div>
           <submit class="btn btn-outline-secondary" type="submit" id="button-addon2"><i
               class="mdi mdi-plus"></i></submit>
         </div>
