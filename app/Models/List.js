@@ -14,7 +14,7 @@ export class List {
     console.log(this.name);
     console.log(this.color)
     return `
-    <div id='lists' class="row">
+    <div id="lists" class="row">
     <div class="col-md-4 p-3">
       <div class="rounded shadow bg-white">
         <div style="${'background' + ':' + this.color + ';'}" class="rounded-top text-center p-2">
