@@ -55,8 +55,6 @@ export class List {
     return template
   }
 
-
-
   // NOTE find how many tasks are for this list, use a filter, and then get the length of that array
   // NOTE do another get method, filter array by listId, and then filter again by homw many are complete
   // get TasksTotal(){}
@@ -65,6 +63,7 @@ export class List {
     tasks.filter(listsId)
     tasks.filter(this.TasksTotal)
   }
+
 
 
 }

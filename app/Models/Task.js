@@ -15,8 +15,11 @@ export class Task {
     get TaskTemplate() {
         return `
         <li class="d-flex justify-content-between">${this.name} <i class="mdi mdi-delete selectable" title="Delete ${this.name}" onclick="app.tasksController.deleteTask('${this.id}')"></i></li>
+        <input type="checkbox" name="list item checkbox" id="">
         `
-        // NOTE use a input type checkbox here, look into writing a ternary operator based wether or not this.checkbox is true or false
+
+
     }
+    // NOTE use a input type checkbox here, look into writing a ternary operator based wether or not this.checkbox is true or false
 
 }

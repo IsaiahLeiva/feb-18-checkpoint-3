@@ -9,7 +9,7 @@ export function saveState() {
         lists: ProxyState.lists,
         tasks: ProxyState.tasks
     }))
-    console.log('I just did a save state');
+    // console.log('I just did a save state');
 }
 
 // localStorage.removeItem('ListBoi')
