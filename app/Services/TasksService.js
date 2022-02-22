@@ -10,6 +10,7 @@ class TasksService {
         // console.log('this works', newTask);
         const task = new Task(newTask)
         ProxyState.tasks = [...ProxyState.tasks, task]
+        console.log(ProxyState.tasks)
     }
 
 }

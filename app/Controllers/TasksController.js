@@ -3,19 +3,17 @@ import { tasksService } from "../Services/TasksService.js"
 import { loadState, saveState } from "../Utils/LocalStorage.js"
 
 
-// function _drawTask() {
-//     let template = ''
-//     const tasks = ProxyState.tasks
-//     console.log(tasks)
-//     tasks.forEach(t => template += t.Template)
-//     document.getElementById('tasks').innerHTML = template
-// }
+
+// _drawTask()
 
 export class TasksController {
     // NOTE this is where you need to pass down a listId
-    createTask(listID) {
+    createTask(listID, event) {
         console.log('creating a task');
+        console.log(event.target)
         window.event.preventDefault()
+
+        console.log(ProxyState.tasks[0].TaskTemplate)
         const form = window.event.target
 
         const newTask = {
@@ -23,6 +21,9 @@ export class TasksController {
             listID,
             name: form.taskname.value
         }
+        console.log(event.target.parentNode)
+        // event.target.insertAdjacentHTML("afterend", '<div style = "background: red; height: 100px; width: 100px;">test</div>')
+        event.target.parentNode.innerHTML += `<div class = 'testing'></div>`
         console.log("[TaskController]: createTask", newTask)
         tasksService.createTask(newTask)
     }

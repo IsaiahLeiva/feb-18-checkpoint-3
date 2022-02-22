@@ -2,13 +2,24 @@ import { ProxyState } from "../AppState.js"
 import { listsService } from "../Services/ListsService.js"
 import { loadState, saveState } from "../Utils/LocalStorage.js"
 
+
+
+
 //Private
 function _drawList() {
+    console.log(ProxyState.lists)
     let template = ''
     const lists = ProxyState.lists
     console.log(lists)
     lists.forEach(l => template += l.Template)
     document.getElementById('lists').innerHTML = template
+
+
+    let taskTemplate = ''
+    const tasks = ProxyState.tasks
+    tasks.forEach(t => taskTemplate += t.TaskTemplate)
+    console.log(taskTemplate)
+    document.getElementById('lists').innerHTML += taskTemplate
 }
 
 
