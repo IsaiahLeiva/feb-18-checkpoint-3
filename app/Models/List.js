@@ -33,7 +33,7 @@ export class List {
         </div>
 
         <form class="px-3 pb-2" onsubmit="app.tasksController.createTask(this.id,event)">
-          <div class="input-group">
+        <div class="input-group">
             <input type="text" name="taskname" id="requirement" class="form-control" minlength="3" maxlength="50"
               placeholder="Add Task..." aria-label="task" aria-describedby="task" id="name">
             <div id="error"></div>
@@ -42,8 +42,8 @@ export class List {
           </div>
         </form>
       </div>
-    </div>
-        `
+      </div>
+      `
   }
 
   get TasksTemplate() {

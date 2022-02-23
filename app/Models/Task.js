@@ -7,12 +7,13 @@ export class Task {
         this.id = data.id || generateId()
         this.name = data.name
         // NOTE you're going about this the wrong way. You need to keep track of whether or not a task is complete... think true or false
-        this.checkbox = data.checkbox || false
+        this.checkbox = data.checkbox || true
         // NOTE each task will need a listId to tell the task which list it belongs on
+        this.listId = data.listId
 
     }
 
-    get TaskTemplate() {
+    get Template() {
         return `
         <li class="d-flex justify-content-between">${this.name} <i class="mdi mdi-delete selectable" title="Delete ${this.name}" onclick="app.tasksController.deleteTask('${this.id}')"></i></li>
         <input type="checkbox" name="list item checkbox" id="">

@@ -15,11 +15,11 @@ function _drawList() {
     document.getElementById('lists').innerHTML = template
 
 
-    let taskTemplate = ''
-    const tasks = ProxyState.tasks
-    tasks.forEach(t => taskTemplate += t.TaskTemplate)
-    console.log(taskTemplate)
-    document.getElementById('lists').innerHTML += taskTemplate
+    // let taskTemplate = ''
+    // const tasks = ProxyState.tasks
+    // tasks.forEach(t => taskTemplate += t.TaskTemplate)
+    // console.log(taskTemplate)
+    // document.getElementById('lists').innerHTML += taskTemplate
 }
 
 
