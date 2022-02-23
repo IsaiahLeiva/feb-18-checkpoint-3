@@ -28,11 +28,12 @@ export class List {
           <div class="bg-secondary lighten-30 mt-4 p-2 rounded">
             <ul>
               ${this.TasksTemplate}
+        
             </ul>
           </div>
         </div>
 
-        <form class="px-3 pb-2" onsubmit="app.tasksController.createTask(this.id,event)">
+        <form class="px-3 pb-2" onsubmit="app.tasksController.createTask('${this.id}',event)">
         <div class="input-group">
             <input type="text" name="taskname" id="requirement" class="form-control" minlength="3" maxlength="50"
               placeholder="Add Task..." aria-label="task" aria-describedby="task" id="name">
@@ -48,8 +49,9 @@ export class List {
 
   get TasksTemplate() {
     let template = ''
+    // debugger
     // NOTE right here is where you need to filter the tasks by their listId (complete)
-    const myTasks = ProxyState.tasks.filter(t => t.listsId == this.id)
+    const myTasks = ProxyState.tasks.filter(t => t.listId == this.id)
     myTasks.forEach(t => template += t.Template)
     return template
   }
